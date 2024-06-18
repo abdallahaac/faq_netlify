@@ -1,0 +1,371 @@
+﻿//Tofix:
+
+// Import files
+@import url(reset.css);
+
+/* Variables */
+
+$main-text-color: #444444;
+
+/* Native component */
+
+html,
+body {
+	font-size: 18px;
+	overflow-x: hidden;
+}
+
+body {
+	background-color: white;
+	font-family: "Inter", sans-serif;
+
+	position: relative;
+
+	&::after {
+		background: #26374a url(../img/footer-img.png) repeat center;
+		background-size: cover;
+		content: "";
+		display: block;
+		height: 189px;
+		width: 100%;
+	}
+}
+
+header {
+	align-content: center;
+	background: transparent url(../img/header.jpg) no-repeat center;
+	background-size: cover;
+	border-bottom: 3px solid #cccccc;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+
+	@media screen and (max-width: 640px) {
+		// height: 200px;
+	}
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 700;
+}
+
+h1 {
+	background-color: rgba(0, 0, 0, 0.2);
+	color: white;
+	font-size: 2em;
+	margin: 7rem 0;
+	padding: 1rem 0;
+	text-align: center;
+	width: 100%;
+
+	span {
+		display: block;
+	}
+
+	span:nth-child(1) {
+		background-color: rgba(0, 0, 0, 0.4);
+		border-radius: 26px;
+		display: inline-block;
+		font-size: 0.7em;
+		margin-bottom: 0.4rem;
+		padding: 0.5rem 2rem;
+	}
+
+	@media screen and (max-width: 640px) {
+		margin: 3rem 0;
+	}
+}
+
+h2 {
+	color: $main-text-color;
+	font-weight: 800;
+}
+
+p,
+li {
+	color: $main-text-color;
+	line-height: 1.4;
+}
+
+main {
+	margin: 0 auto;
+	max-width: 1000px;
+	// padding: 0 1rem 2rem;
+}
+
+/* Layout classes */
+
+.content-box {
+}
+
+/* Theme classes */
+
+.list-theme-a {
+	border-radius: 6px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	list-style: none;
+	margin: 0;
+	padding: 2rem;
+
+	li {
+		border-bottom: 1px solid #cccccc;
+		padding: 1rem 1rem 1rem 3rem;
+		position: relative;
+
+		&::before {
+			background-image: url(../img/ico/ico-check.png);
+			background-size: cover;
+			content: "";
+			display: block;
+			height: 18px;
+			left: 0;
+			position: absolute;
+			width: 25px;
+		}
+
+		&:last-child {
+			border: 0;
+		}
+	}
+}
+
+/* Custom */
+
+main {
+	section {
+		padding: 2rem 2rem;
+		position: relative;
+
+		@media screen and (max-width: 768px) {
+			padding: 1rem;
+		}
+
+		&:nth-child(1) {
+			img {
+				border-radius: 6px;
+				box-shadow: 0px 5px 4px 1px rgba(0, 0, 0, 0.13);
+				max-width: 380px;
+				width: 100%;
+
+				@media screen and (max-width: 768px) {
+					display: none;
+				}
+			}
+
+			.content-box {
+				display: grid;
+				grid-template-columns: 40% 60%;
+				grid-gap: 1rem;
+
+				h2 {
+					margin-top: 0;
+				}
+
+				@media screen and (max-width: 768px) {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			ul {
+				background-color: white;
+				margin-bottom: 1rem;
+				width: 100%;
+
+				@media screen and (max-width: 768px) {
+					margin-bottom: 1rem;
+					max-width: none;
+					width: 100%;
+				}
+			}
+		}
+
+		&:nth-child(2) {
+			background-color: #fbfbfb;
+
+			&::before {
+				background-color: #fbfbfb;
+				bottom: 0;
+				content: "";
+				left: -100%;
+				position: absolute;
+				right: -100%;
+				top: 0;
+				z-index: -1;
+			}
+
+			h2 {
+				text-align: center;
+			}
+		}
+		&:nth-child(3) {
+			h2 {
+				color: #3d6c7c;
+				text-align: center;
+			}
+		}
+	}
+}
+
+/* Components */
+
+/* Carousel */
+
+.carousel {
+	margin: 1rem 0 0;
+}
+
+/* Accordion style */
+.accordion {
+	margin: 3rem 0 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+.accordion-wrapper {
+	padding: 1em 0;
+}
+
+.accordion button[data-action="toggleAll"] {
+	background-color: #366a88;
+	color: #ffffff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1em;
+	transition: background-color 0.3s ease;
+
+	&:hover,
+	&:focus {
+		background-color: #0f5b88;
+	}
+}
+
+.accordion h3 {
+	border-bottom: 1px solid hsl(0deg 0% 52%);
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+
+	&:nth-child(1) {
+		border-top: 0;
+	}
+}
+
+.accordion:focus-within {
+	border-color: hsl(216deg 94% 43%);
+}
+
+.accordion:focus-within h3 {
+	// background-color: hsl(0deg 0% 97%);
+}
+
+.accordion .accordion-panel h4 {
+	color: #366a88;
+	font-weight: 400;
+}
+// .accordion>*+* {
+//     border-top: 1px solid hsl(0deg 0% 52%);
+// }
+
+.accordion .panel-trigger {
+	background: none;
+	color: #366a88;
+	display: block;
+	// font-size: 1rem;
+	font-weight: normal;
+	margin: 0;
+	padding: 1rem 1.5rem 1rem 3rem;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	outline: none;
+}
+
+.accordion .panel-trigger:focus,
+.accordion .panel-trigger:hover {
+	background: hsl(216deg 94% 94%);
+}
+
+.accordion .panel-trigger:focus {
+	outline: 4px solid transparent;
+}
+
+.accordion > *:first-child .panel-trigger,
+.accordion > *:first-child {
+	border-radius: 5px 5px 0 0;
+}
+
+.accordion > *:last-child .panel-trigger,
+.accordion > *:last-child {
+	border-radius: 0 0 5px 5px;
+}
+
+.accordion button {
+	border-style: none;
+}
+
+.accordion button::-moz-focus-inner {
+	border: 0;
+}
+
+.accordion .accordion-title {
+	display: block;
+	pointer-events: none;
+	border: transparent 2px solid;
+	border-radius: 5px;
+	padding: 0.25em;
+	outline: none;
+}
+
+.accordion .panel-trigger:focus .accordion-title {
+	border-color: hsl(216deg 94% 43%);
+}
+
+.accordion .accordion-icon {
+	border: solid #3d6c7c;
+	border-width: 0 2px 2px 0;
+	height: 0.8rem;
+	pointer-events: none;
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	transform: translateY(-60%) rotate(-45deg);
+	width: 0.8rem;
+}
+
+.accordion .panel-trigger:focus .accordion-icon,
+.accordion .panel-trigger:hover .accordion-icon {
+	border-color: hsl(216deg 94% 43%);
+}
+
+.accordion .panel-trigger[aria-expanded="true"] .accordion-icon {
+	transform: translateY(-50%) rotate(45deg);
+}
+
+.accordion .accordion-panel {
+	background-color: #fafafa;
+	margin: 0 0 1rem;
+	padding: 2em 1.5em;
+}
+
+/* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
+.accordion .accordion-panel[hidden] {
+	display: none;
+}
+
+.accordion fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.accordion input {
+	border: 1px solid hsl(0deg 0% 42%);
+	border-radius: 0.3em;
+	display: block;
+	font-size: inherit;
+	padding: 0.3em 0.5em;
+}
