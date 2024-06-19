@@ -313,7 +313,7 @@ footer {
 .job-aid-title {
 	font-size: 21px !important;
 	text-align: center;
-	margin: 0px 200px 0px 0px !important;
+	margin: 0 auto;
 }
 footer::after {
 	content: "";
@@ -460,6 +460,9 @@ main {
 	.job-aid-title {
 		display: none;
 	}
+	.job-aid-title {
+		display: none !important;
+	}
 	.left {
 		display: none;
 	}
@@ -529,4 +532,25 @@ button.panel-trigger {
 }
 .csps-title {
 	font-size: 20px;
+}
+.job-aid-title-container {
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+.job-aid-title {
+	display: flex;
+	max-width: 100% !important;
+	position: relative;
+	transform: translateX(60px);
+	color: #0f5b88;
+	font-size: 25px !important;
+}
+section {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
 }
