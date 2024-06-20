@@ -324,8 +324,8 @@ footer::after {
 	height: 100%;
 	/* background: url("https://app.csps-efpc.gc.ca/d2l/common/viewFile.d2lfile/Content/L2NvbnRlbnQvZW5mb3JjZWQvMTU4MzQtSVJBMS1KMjMtREVWLUVOL2Zvb3Rlci1qdXN0aWNlLWNhbmFkYS5wbmc/footer-justice-canada.png?ou=15834")
 		center no-repeat #282828; */
-	background: url("/assets/img/footer-justice-canada.png") center no-repeat
-		#282828;
+	background: url("https://app.csps-efpc.gc.ca/d2l/common/viewFile.d2lfile/Content/L2NvbnRlbnQvZW5mb3JjZWQvMTU4MzQtSVJBMS1KMjMtREVWLUVOL2Zvb3Rlci1qdXN0aWNlLWNhbmFkYS5wbmc/footer-justice-canada.png?ou=15834")
+		center no-repeat #282828;
 	background-size: cover; /* or 'contain' if you prefer */
 	opacity: 0.5; /* Adjust opacity if you want the background image to be semi-transparent */
 	z-index: 1; /* Ensure the background is behind the content */

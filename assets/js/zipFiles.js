@@ -11,7 +11,7 @@ const includeItems = [
 
 // Create a new zip file
 // const output = fs.createWriteStream("IRA1-PA3-DEV-FR.zip");
-const output = fs.createWriteStream("IRA1-J23-DEV-FR.zip");
+const output = fs.createWriteStream("FAQ-FR.zip");
 const archive = archiver("zip", {
 	zlib: { level: 9 }, // Set compression level
 });

@@ -8,13 +8,13 @@
                       http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
   <organizations default="ORGC256PESLE">
     <organization identifier="ORGC256PESLE">
-        <!-- <title>Frequently Asked Questions</title> -->
+        <title>Frequently Asked Questions</title>
 
-		<title>Foire aux questions</title>
+		<!-- <title>Foire aux questions</title> -->
 
       <item identifier="C256PESLE_I01" identifierref="C256PESLE_S01" isvisible="true">
-        <!-- <title>Frequently Asked Questions</title> -->
-		<title>Foire aux questions</title>
+        <title>Frequently Asked Questions</title>
+		<!-- <title>Foire aux questions</title> -->
 
         <metadata>
           <schema>ADL SCORM</schema>
@@ -28,12 +28,12 @@
     </organization>
   </organizations>
   <resources>
-    <resource identifier="C256PESLE_S01" type="webcontent" adlcp:scormtype="sco" href="index_fr.html">
+    <resource identifier="C256PESLE_S01" type="webcontent" adlcp:scormtype="sco" href="index.html">
       <metadata>
         <schema>ADL SCORM</schema>
         <schemaversion>1.2</schemaversion>
       </metadata>
-      <file href="index_fr.html"/>
+      <file href="index.html"/>
     </resource>
   </resources>
 </manifest>
